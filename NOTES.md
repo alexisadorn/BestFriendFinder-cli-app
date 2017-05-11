@@ -2,16 +2,11 @@
 [X] Download gem from bundler
 [X] Set up GitHub Repo
 [X] Copy spec.md from Learn repo
-[ ] Watch Resources videos on Learn page
----> Environments, Requiring Files, Bundler and Gems, 1h21m
----> Collaborating Objects: Building a CLI Scraper Gem from Models to CLI, 1h05m
----> Common Anti-Patterns in CLI Gem, 56m
----> Student Example #1: Refactoring a CLI Gem, 21m
----> Student Example #2: Rebuilding Concert Gem, 1h30m
+[X] Watch Resources videos on Learn page
 
-[ ] Start with building the executable file
+[X] Figure out how the 'require' and environment settings need to work
 [ ] Plan out the project structure using test data
-[ ] Figure out how the 'require' and environment settings need to work
+[ ] Start with building the executable file
 [ ] Get permission from BFAS to scrape their site -pending-
 [ ] Begin replacing test data with real data from BFAS site
 [ ] List the objects that we can create & start making objects
