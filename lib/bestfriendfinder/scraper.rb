@@ -1,4 +1,6 @@
-class Scraper
+require_relative '../../config/environment'
+
+class BestFriendFinder::Scraper
 
   def self.scrape_adoptable_pets(animal)
     pets = []

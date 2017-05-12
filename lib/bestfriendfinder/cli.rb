@@ -1,6 +1,6 @@
 require_relative '../../config/environment.rb'
 
-class BestFriendFinderCLI
+class BestFriendFinder::CLI
 
   def initialize
 
@@ -13,7 +13,10 @@ class BestFriendFinderCLI
     friend = gets.chomp
     case friend
     when "dog" # handle uppercase spelling
-      pets = Scraper.scrape_adoptable_pets("dogs")
+      pets = BestFriendFinder::Scraper.scrape_adoptable_pets("dogs")
+      dog = BestFriendFinder::Dogs.create_dogs(pets)
+      all_dogs = BestFriendFinder::Dogs.all
+      all_dogs.each.with_index(1) {|dog, index| puts "#{index}. #{dog.name} - #{dog.breed} - #{dog.age}"}
       # Make Dog objects
       # Display Dogs
     when "cat"

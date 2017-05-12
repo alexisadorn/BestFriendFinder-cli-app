@@ -1,5 +1,5 @@
-require "furry_friend_finder/version"
+require_relative "../config/environment"
 
-module FurryFriendFinder
+module BestFriendFinder
   # Your code goes here...
 end
