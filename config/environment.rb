@@ -4,4 +4,4 @@ require 'open-uri'
 
 # Add all required files here -> require_relative '../lib/files'
 require_relative '../lib/bestfriendfinder/cli'
-require_relative '../lib/bestfriendfinder/scraper.rb'
+require_relative '../lib/bestfriendfinder/scraper'

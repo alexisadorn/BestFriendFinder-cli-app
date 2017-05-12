@@ -1,3 +1,5 @@
+require_relative '../../config/environment.rb'
+
 class BestFriendFinderCLI
 
   def initialize
@@ -11,10 +13,9 @@ class BestFriendFinderCLI
     friend = gets.chomp
     case friend
     when "dog" # handle uppercase spelling
-      s = Scraper.scrape_adoptable_pets("dogs")
-      #binding.pry
-      puts "Here are all the dogs up for adoption:"
-      puts "#{s.name} - #{s.breed} - #{s.age}"
+      pets = Scraper.scrape_adoptable_pets("dogs")
+      # Make Dog objects
+      # Display Dogs
     when "cat"
       puts "Here are all the cats up for adoption:"
       puts "Garfield"
