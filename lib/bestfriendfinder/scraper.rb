@@ -14,4 +14,10 @@ class BestFriendFinder::Scraper
     end
     pets
   end
+
+  def self.find_details_url(pet_name)
+    # Take the pet's name, scrape the main pet page and look for the CSS tag.text that equal the same name.
+    # Once you have found that, pass that URL into a new Scraper method to scrape_pet_profile
+    # Return hash of pet profile information
+  end
 end
