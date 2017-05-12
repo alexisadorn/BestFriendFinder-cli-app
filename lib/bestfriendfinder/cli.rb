@@ -1,0 +1,44 @@
+class BestFriendFinderCLI
+
+  def initialize
+
+  end
+
+  def call
+    puts "Hello! Ready to find your new best friend?"
+    puts "What kind of friend are you looking for today?"
+    puts "Dog | Cat | Rabbit | Bird | Horse | Pig"
+    friend = gets.chomp
+    case friend
+    when "dog" # handle uppercase spelling
+      s = Scraper.scrape_adoptable_pets("dogs")
+      #binding.pry
+      puts "Here are all the dogs up for adoption:"
+      puts "#{s.name} - #{s.breed} - #{s.age}"
+    when "cat"
+      puts "Here are all the cats up for adoption:"
+      puts "Garfield"
+      puts "Tom"
+    when "rabbit"
+      puts "Here are all the rabbits up for adoption:"
+      puts "Easter Bunny"
+      puts "Jack"
+    when "bird"
+      puts "Here are all the birds up for adoption:"
+      puts "Toucan Sam"
+      puts "Big Bird"
+    when "horse"
+      puts "Here are all the horses up for adoption:"
+      puts "Shadowfax"
+      puts "Bill the Pony"
+    when "pig"
+      puts "Here are all the pigs up for adoption"
+      puts "Babe"
+      puts "Wilbur"
+    else
+      puts "Sorry, we do not have that animal here."
+    end
+  end
+
+  # Write method to ask user if they want to loop back and do it again
+end
