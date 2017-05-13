@@ -29,6 +29,7 @@ class BestFriendFinder::Scraper
 
     dog_profile = "http://bestfriends.org" + url
     doc = Nokogiri::HTML(open(dog_profile))
+
     pet_items = doc.css("div.rescue-groups-pet-info-item")
 
     pet_items.each do |attribute|
@@ -40,6 +41,7 @@ class BestFriendFinder::Scraper
         pet_profile_details[:sex] = attribute.css("span.bold.black").text
       end
     end
+    pet_profile_details[:description] = doc.css("section.rescue-groups-pet-info-section p").text.gsub("\n                        ", "")
     pet_profile_details
   end
 end

@@ -1,7 +1,7 @@
 require_relative '../../config/environment'
 
 class BestFriendFinder::Dogs
-  attr_accessor :name, :breed, :age, :url
+  attr_accessor :name, :breed, :age, :url, :size, :color, :sex, :description
 
   @@all = []
 
@@ -20,7 +20,10 @@ class BestFriendFinder::Dogs
     end
   end
 
-  def self.add_dog_attributes
-
+  def add_dog_attributes(details_hash)
+    details_hash.each do |k, v|
+      self.send(("#{k}="), v)
+    end
+    self
   end
 end
