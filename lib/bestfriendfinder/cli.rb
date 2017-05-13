@@ -21,8 +21,8 @@ class BestFriendFinder::CLI
     puts "Thank you for your input. One moment as we pull up a list of furry friends...\n\n"
 
     @animal_object = define_animal_object(user_input)
-    Animal.new(PETS[user_input], @animal_object)
-
+    AnimalFactory.new(PETS[user_input], @animal_object)
+    
     display_all_animals
     replay?
   end

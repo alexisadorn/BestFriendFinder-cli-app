@@ -1,6 +1,6 @@
 require_relative '../../config/environment'
 
-class Animal
+class AnimalFactory
   include BestFriendFinder::Definable
 
   attr_reader :species
