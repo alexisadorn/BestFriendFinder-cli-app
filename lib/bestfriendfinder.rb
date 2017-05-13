@@ -11,5 +11,6 @@ module BestFriendFinder
     def define_animal_object(user_input)
       Object.const_get("BestFriendFinder::#{PETS[user_input]}")
     end
+
   end
 end

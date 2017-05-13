@@ -1,6 +1,8 @@
-require_relative '../../config/environment'
+require_relative '../../../config/environment'
 
-class BestFriendFinder::Dogs
+class Dogs
+  include BestFriendFinder::Definable
+
   attr_accessor :name, :breed, :age, :url, :size, :color, :sex, :description
 
   @@all = []
