@@ -1,28 +1,21 @@
 require_relative '../../config/environment'
 
 class Animal
-  attr_reader :species, :animal_index
+  include BestFriendFinder::Definable
 
-  PETS = ["Dogs", "Cats", "Rabbits", "Birds", "Equine", "Pigs", "Barnyard", "Small-Furry"]
+  attr_reader :species
 
-  def initialize(species, user_input)
+  def initialize(species, object)
     @species = species.downcase
-    @animal_index = user_input
-    define_animal_object
-    scrape_animal_page
+    @animal_object = object
+
+    scrape_and_create_animals
     add_attributes_to_animals
   end
 
-  def define_animal_object
-    @animal_object = Object.const_get("BestFriendFinder::#{PETS[@animal_index]}")
-  end
-
-  def scrape_animal_page
+  def scrape_and_create_animals # Scrapes page ending with /@species and creates new objects based on the previously defined species object
     hash_of_pets = BestFriendFinder::Scraper.scrape_adoptable_pets(@species)
     @animal_object.create_new(hash_of_pets)
-    # Method above creates new objects based on the species name that the user chose. Then it calls
-    # on a create_new method, which is currently in Dogs. But I will probably create a module to connect
-    # the dog object to so that each animal object can pull from the same #create_new method.
   end
 
   def add_attributes_to_animals
