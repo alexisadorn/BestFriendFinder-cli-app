@@ -18,13 +18,14 @@ class BestFriendFinder::CLI
       all_dogs = BestFriendFinder::Dogs.all
       all_dogs.each.with_index(1) {|dog, index| puts "#{index}. #{dog.name} - #{dog.breed} - #{dog.age}"}
       puts "Which dog would you like more information on? (Number)"
-      dog_details = gets.chomp
-      dog_details.to_i - 1
+      dog_num = gets.chomp
+      new_bff = BestFriendFinder::Scraper.scrape_pet_profile(all_dogs[dog_num.to_i - 1].url)
+      binding.pry
       # Find out which pet is associated with the number
       # Pass that pet's name into the Scraper find_details_url
       # Get back a hash of pet details
       # Add those pet details to the Dog instance
-      # Return the details information to the user 
+      # Return the details information to the user
     when "cat"
       puts "Here are all the cats up for adoption:"
       puts "Garfield"
