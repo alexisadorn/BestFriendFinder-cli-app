@@ -6,29 +6,29 @@ class BestFriendFinder::CLI
   def call
     puts "\nWelcome to Best Friend Finder!"
     puts "-----------------------------------"
-    puts "Are you ready to find your new best friend?\n\n"
+    puts "Are you ready to find your new best friend?\n"
     start
   end
 
   def start
-    puts "What kind of friends would you like to meet today? (Please enter the number)\n\n"
+    puts "\nWhat kind of friends would you like to meet today? (Please enter the number)\n\n"
 
     PETS.each.with_index(1) do |animal, number|
       puts "#{number}. #{animal}"
     end
 
     user_input = number_to_index(gets.chomp)
-    puts "Thank you for your input. One moment as we pull up a list of furry friends...\n\n"
+    puts "Thank you for your input. One moment as we pull up a list of friends..."
 
     @animal_object = define_animal_object(user_input)
     AnimalFactory.new(PETS[user_input], @animal_object)
-    
+
     display_all_animals
     replay?
   end
 
   def display_all_animals
-    puts "\n AVAILABLE FOR ADOPTION: \n"
+    puts "\n\nAVAILABLE FOR ADOPTION: \n"
     puts "-----------------------------"
 
     all_pets = @animal_object.all
@@ -42,7 +42,7 @@ class BestFriendFinder::CLI
 
   def display_details(num)
       pet = @animal_object.all[num]
-      puts "\n#{pet.name.upcase}"
+      puts "\n#{pet.name.upcase} - #{pet.species}"
       puts "------------------------------"
       puts "Breed: #{pet.breed}"
       puts "Age: #{pet.age}"
