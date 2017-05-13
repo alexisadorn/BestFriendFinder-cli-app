@@ -2,6 +2,8 @@ require_relative '../../config/environment.rb'
 
 class BestFriendFinder::CLI
 
+  PETS = ["Dogs", "Cats", "Rabbits", "Birds", "Equine", "Pigs", "Barnyard", "Small-Furry"]
+
   def initialize
 
   end
@@ -9,42 +11,21 @@ class BestFriendFinder::CLI
   def call
     puts "\nWelcome to Best Friend Finder!"
     puts "Are you ready to find your new best friend?\n\n"
+    start
+  end
+
+  def start
     puts "What kind of friends would you like to meet today? (Please enter the number)\n"
-    puts "
-      1. Dogs
-      2. Cats
-      3. Rabbits
-      4. Birds
-      5. Equine
-      6. Pigs
-      7. Barnyard
-      8. Small & Furry"
+    PETS.each.with_index(1) do |animal, number|
+      puts "#{number}. #{animal}"
+    end
 
-    new_friend = gets.chomp
+    user_input = gets.chomp
+    user_input = number_to_index(user_input)
 
-    case new_friend
-      when "1"
-        @species = "dogs"
-      when "2"
-        @species = "cats"
-      when "3"
-        @species = "rabbits"
-      when "4"
-        @species = "birds"
-      when "5"
-        @species = "equine"
-      when "6"
-        @species = "pigs"
-      when "7"
-        @species = "barnyard"
-      when "8"
-        @species = "small-furry"
-      else
-        puts "I'm sorry, that is in an invalid number"
-        self.call
-      end
+    define_animal_object(user_input)
 
-    Animal.new(@species)
+    Animal.new(PETS[user_input], user_input)
 
     display_all_animals
   end
@@ -53,31 +34,32 @@ class BestFriendFinder::CLI
     user_input.to_i - 1
   end
 
-  def display_all_animals
-    if @species == "dogs"
-      all_dogs = BestFriendFinder::Dogs.all
-      all_dogs.each.with_index(1) {|dog, num| puts "#{num}. #{dog.name} - #{dog.breed} - #{dog.age}"}
-    end
+  def define_animal_object(user_input)
+    @animal_object = Object.const_get("BestFriendFinder::#{PETS[user_input]}")
+  end
 
-    puts "Which of our #{@species} would you like more information on? (Please enter the Number)"
+  def display_all_animals
+    all_pets = @animal_object.all
+    all_pets.each.with_index(1) {|pet, num| puts "#{num}. #{pet.name} - #{pet.breed} - #{pet.age}"}
+
+    puts "Which would you like more information on? (Please enter the Number)"
+
     animal_number = gets.chomp
     index = number_to_index(animal_number)
     display_details(index)
   end
 
   def display_details(num)
-    if @species == "dogs"
-      dog = BestFriendFinder::Dogs.all[num]
-      puts dog.name
+      pet = @animal_object.all[num]
+      puts pet.name
       puts "---------"
-      puts "Breed: #{dog.breed}"
-      puts "Age: #{dog.age}"
-      puts "Size: #{dog.size}"
-      puts "Color: #{dog.color}"
-      puts "Sex: #{dog.sex}\n\n"
-      puts "#{dog.description}\n\n"
-      puts "For more info on how to adopt #{dog.name}, visit www.bestfriends.org/#{dog.url}"
-    end
+      puts "Breed: #{pet.breed}"
+      puts "Age: #{pet.age}"
+      puts "Size: #{pet.size}"
+      puts "Color: #{pet.color}"
+      puts "Sex: #{pet.sex}\n\n"
+      puts "#{pet.description}\n\n"
+      puts "For more info on how to adopt #{pet.name}, visit www.bestfriends.org/#{pet.url}"
   end
 
   # Write method to ask user if they want to loop back and do it again
