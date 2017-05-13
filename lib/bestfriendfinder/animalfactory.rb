@@ -6,7 +6,11 @@ class AnimalFactory
   attr_reader :species
 
   def initialize(species, object)
-    @species = species.downcase
+    if species == "Small"
+      @species = "small-furry"
+    else
+      @species = species.downcase
+    end
     @animal_object = object
 
     scrape_and_create_animals

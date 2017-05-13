@@ -1,6 +1,6 @@
 require_relative '../../../config/environment'
 
-class Cats < Animals
+class Equine < Animals
   attr_reader :species
 
   @@all = []
@@ -10,7 +10,7 @@ class Cats < Animals
   end
 
   def species
-    @species = "Cat"
+    @species = "Equine"
   end
 
 end

@@ -28,7 +28,8 @@ class BestFriendFinder::CLI
   end
 
   def display_all_animals
-    puts "\n\nAVAILABLE FOR ADOPTION: \n"
+    puts "\n\nAVAILABLE #{@animal_object.to_s.upcase} FOR ADOPTION: \n"
+    puts "Name - Breed - Age"
     puts "-----------------------------"
 
     all_pets = @animal_object.all
@@ -54,7 +55,7 @@ class BestFriendFinder::CLI
   end
 
   def replay?
-    puts "\n\nWould you like to search more adoptable pets? [Yes/No]\n"
+    puts "\n\nWould you like to search more adoptable pets? [y/n]\n"
     user_input = gets.chomp
 
     if ["Yes", "yes", "Y", "y"].include?(user_input)

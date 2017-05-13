@@ -2,7 +2,7 @@ require_relative "../config/environment"
 
 module BestFriendFinder
   module Definable
-    PETS = ["Dogs", "Cats", "Rabbits", "Birds", "Equine", "Pigs", "Barnyard", "Small-Furry"]
+    PETS = ["Dogs", "Cats", "Rabbits", "Birds", "Equine", "Pigs", "Barnyard", "Small"]
 
     def number_to_index(user_input)
       user_input.to_i - 1

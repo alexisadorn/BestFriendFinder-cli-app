@@ -11,11 +11,12 @@
 [X] List the objects that we can create & start making objects
 [X] Record myself coding for 30 mins.
 --5/13/17--
-[ ] Clean up code in CLI #call method
-[ ] Break out code into separate methods where necessary
+[X] Clean up code in CLI #call method
+[X] Break out code into separate methods where necessary
 [ ] See if the description can be formatted better (no spaces between <p> tags)
-[ ] Remove #find_details_url method from Scraper
+[X] Remove #find_details_url method from Scraper
 [ ] Think through how we can use same methods for cats/birds/etc.
+[ ] Write something that does not add the dog object to the list of @@all if the dog already exists
 -----------
 [ ] Get permission from BFAS to scrape their site -pending-
 
