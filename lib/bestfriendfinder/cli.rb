@@ -1,8 +1,7 @@
 require_relative '../../config/environment.rb'
 
 class BestFriendFinder::CLI
-
-  PETS = ["Dogs", "Cats", "Rabbits", "Birds", "Equine", "Pigs", "Barnyard", "Small-Furry"]
+  include BestFriendFinder::Definable
 
   def initialize
 
@@ -15,16 +14,17 @@ class BestFriendFinder::CLI
   end
 
   def start
-    puts "What kind of friends would you like to meet today? (Please enter the number)\n"
+    puts "What kind of friends would you like to meet today? (Please enter the number)\n\n"
+
     PETS.each.with_index(1) do |animal, number|
       puts "#{number}. #{animal}"
     end
 
     user_input = gets.chomp
     user_input = number_to_index(user_input)
+    puts "Thank you for your input. One moment as we pull up a list of friends...\n"
 
     define_animal_object(user_input)
-
     Animal.new(PETS[user_input], user_input)
 
     display_all_animals

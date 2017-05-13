@@ -1,5 +1,7 @@
 require_relative "../config/environment"
 
 module BestFriendFinder
-  # Your code goes here...
+  module Definable
+    PETS = ["Dogs", "Cats", "Rabbits", "Birds", "Equine", "Pigs", "Barnyard", "Small-Furry"]
+  end
 end

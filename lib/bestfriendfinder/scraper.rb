@@ -16,14 +16,6 @@ class BestFriendFinder::Scraper
     pets
   end
 
-  def self.find_details_url(pet_name) #remove this!
-    doc = Nokogiri::HTML(open("http://bestfriends.org/adopt/adopt-our-sanctuary/#{animal}"))
-    # Take the pet's name, scrape the main pet page and look for the CSS tag.text that equal the same name.
-    # Once you have found that, pass that URL into a new Scraper method to scrape_pet_profile
-    # Return hash of pet profile information
-    pet_name
-  end
-
   def self.scrape_pet_profile(url)
     pet_profile_details = {}
 
