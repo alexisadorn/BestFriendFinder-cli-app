@@ -18,6 +18,12 @@ class BestFriendFinder::CLI
     end
 
     user_input = number_to_index(gets.chomp)
+
+    if user_input < 0 || user_input >= PETS.size
+      puts "I'm sorry, that was an incorrect entry. Please try again."
+      start
+    end
+
     puts "Thank you for your input. One moment as we pull up a list of friends..."
 
     @animal_object = define_animal_object(user_input)
@@ -38,6 +44,12 @@ class BestFriendFinder::CLI
     puts "\nWhich pet would you like more information on? (Please enter a number)\n"
 
     animal_number = number_to_index(gets.chomp)
+
+    if animal_number < 0 || animal_number >= all_pets.size
+      puts "I'm sorry, that was an incorrect entry. Please try again."
+      display_all_animals
+    end
+
     display_details(animal_number)
   end
 
