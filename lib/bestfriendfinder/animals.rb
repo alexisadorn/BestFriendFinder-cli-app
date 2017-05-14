@@ -1,11 +1,11 @@
 require_relative '../../config/environment'
 
 class Animals
-  attr_accessor :name, :breed, :age, :url, :size, :color, :sex, :description
+  attr_accessor :species, :name, :breed, :age, :url, :size, :color, :sex, :description
 
   def initialize(attributes)
     attributes.each {|k, v| self.send(("#{k}="), v)}
-    self.class.all << self unless self.class.all.any? {|dog| dog.name == self.name && dog.breed == self.breed && dog.age == self.age}
+    self.class.all << self unless self.class.all.any? {|pet| pet.url == self.url}
   end
 
   def self.create_new(pet_array)

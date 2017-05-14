@@ -19,8 +19,8 @@
 --5/14/17--
 [ ] See if the description can be formatted better (no spaces between <p> tags)
 [ ] How to make a module file for Definable?
-[ ] What if user enters number outside of acceptable range?
-[ ] Can we use already-created species variable from AnimalFactory class instead of having them in each animal class?
+[X] What if user enters number outside of acceptable range?
+[X] Can we use already-created species variable from AnimalFactory class instead of having them in each animal class?
 [ ] Environment file - requiring all files in lib?
 [ ] check_attributes_for_nil method - how to make that cleaner?
 -----------

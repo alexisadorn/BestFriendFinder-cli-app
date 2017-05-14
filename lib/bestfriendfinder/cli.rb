@@ -34,7 +34,11 @@ class BestFriendFinder::CLI
   end
 
   def display_all_animals
-    puts "\n\nAVAILABLE #{@animal_object.to_s.upcase} FOR ADOPTION: \n"
+    if @animal_object == Small
+      puts "\n\nAVAILABLE SMALL & FURRY ANIMALS FOR ADOPTION: \n"
+    else
+      puts "\n\nAVAILABLE #{@animal_object.to_s.upcase} FOR ADOPTION: \n"
+    end
     puts "Name - Breed - Age"
     puts "-----------------------------"
 
@@ -55,7 +59,11 @@ class BestFriendFinder::CLI
 
   def display_details(num)
       pet = @animal_object.all[num]
-      puts "\n#{pet.name.upcase} - #{pet.species}"
+      if pet.species == "small-furry"
+        puts "\n#{pet.name.upcase} - Small & Furry"
+      else
+        puts "\n#{pet.name.upcase} - #{pet.species.capitalize}"
+      end
       puts "------------------------------"
       puts "Breed: #{pet.breed}"
       puts "Age: #{pet.age}"
