@@ -21,14 +21,13 @@ class Animals
   end
 
   def check_attributes_for_nil
-    self.name = "N/A" if self.name == nil || self.name == "" || self.name == " "
-    self.breed = "N/A" if self.breed == nil || self.breed == "" || self.breed == " "
-    self.age = "N/A" if self.age == nil || self.age == "" || self.age == " "
-    self.url = "N/A" if self.url == nil || self.url == "" || self.url == " "
-    self.size = "N/A" if self.size == nil || self.size == "" || self.size == " "
-    self.color = "N/A" if self.color == nil || self.color == "" || self.color == " "
-    self.sex = "N/A" if self.sex == nil || self.sex == "" || self.sex == " "
-    self.description = "N/A" if self.description == nil || self.description == "" || self.description == " "
+    attributes = ["species", "name", "breed", "age", "url", "size", "color", "sex", "description"]
+    empty = [" ", "", nil]
+    attributes.each do |var|
+      if empty.any? { |e| self.send("#{var}") == e}
+        self.send(("#{var}="), "N/A")
+      end
+    end
   end
 
 end
