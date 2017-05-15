@@ -22,13 +22,12 @@ class CLI
       start
     end
 
-    puts "Thank you for your input. One moment as we pull up a list of friends..."
+    puts "\nThank you for your input. One moment as we pull up a list of available #{PETS[user_input].downcase}..."
 
     @animal_object = define_animal_object(user_input)
     AnimalFactory.new(PETS[user_input], @animal_object)
 
     display_all_animals
-    replay?
   end
 
   def display_all_animals
@@ -70,19 +69,27 @@ class CLI
       puts "Sex: #{pet.sex}\n\n"
       puts "#{pet.description}\n\n"
       puts "For more info on how to adopt #{pet.name}, visit www.bestfriends.org#{pet.url}"
+
+      repeat?
   end
 
-  def replay?
-    puts "\n\nWould you like to search more adoptable pets? [y/n]\n"
+  def repeat?
+    puts "\n\nWould you like to search more adoptable pets?\n"
+    puts "1. Yes, take me back to the list of available #{@animal_object.to_s.downcase}."
+    puts "2. Yes, take me back to the main menu."
+    puts "3. No, I'm done.\n\n"
+    puts "Please enter a number.\n"
     user_input = gets.chomp
 
-    if ["Yes", "yes", "Y", "y"].include?(user_input)
+    if user_input == "1"
+      display_all_animals
+    elsif user_input == "2"
       start
-    elsif ["No", "no", "N", "n"].include?(user_input)
+    elsif user_input == "3"
       exit
     else
       puts "I'm sorry, I didn't understand that answer."
-      replay?
+      repeat?
     end
   end
 

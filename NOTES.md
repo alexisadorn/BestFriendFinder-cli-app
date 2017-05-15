@@ -20,7 +20,7 @@
 [X] What if user enters number outside of acceptable range?
 [X] Can we use already-created species variable from AnimalFactory class instead of having them in each animal class?
 [X] Environment file - requiring all files in lib?
-[ ] check_attributes_for_nil method - how to make that cleaner?
+[X] check_attributes_for_nil method - how to make that cleaner?
 -----------
 [ ] Get permission from BFAS to scrape their site -pending-
 [ ] Update the README file
