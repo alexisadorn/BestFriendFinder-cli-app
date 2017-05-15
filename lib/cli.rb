@@ -1,7 +1,5 @@
-require_relative '../../config/environment.rb'
-
-class BestFriendFinder::CLI
-  include BestFriendFinder::Definable
+class CLI
+  PETS = ["Dogs", "Cats", "Rabbits", "Birds", "Equine", "Pigs", "Barnyard", "Small"]
 
   def call
     puts "\nWelcome to Best Friend Finder!"
@@ -86,5 +84,13 @@ class BestFriendFinder::CLI
       puts "I'm sorry, I didn't understand that answer."
       replay?
     end
+  end
+
+  def number_to_index(user_input)
+    user_input.to_i - 1
+  end
+
+  def define_animal_object(user_input)
+    Object.const_get("#{PETS[user_input]}")
   end
 end

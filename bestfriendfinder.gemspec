@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'furry_friend_finder/version'
+require 'version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "furry_friend_finder"
-  spec.version       = FurryFriendFinder::VERSION
+  spec.name          = "BestFriendFinder"
+  spec.version       = BestFriendFinder::VERSION
   spec.authors       = ["'Alexis Dorn'"]
   spec.email         = ["'alexisadorn@gmail.com'"]
 

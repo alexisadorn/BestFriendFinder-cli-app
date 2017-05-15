@@ -1,5 +1,3 @@
-require_relative '../../config/environment'
-
 class Animals
   attr_accessor :species, :name, :breed, :age, :url, :size, :color, :sex, :description
 

@@ -17,11 +17,9 @@
 [X] Think through how we can use same methods for cats/birds/etc.
 [X] Write something that does not add the dog object to the list of @@all if the dog already exists
 --5/14/17--
-[ ] See if the description can be formatted better (no spaces between <p> tags)
-[ ] How to make a module file for Definable?
 [X] What if user enters number outside of acceptable range?
 [X] Can we use already-created species variable from AnimalFactory class instead of having them in each animal class?
-[ ] Environment file - requiring all files in lib?
+[X] Environment file - requiring all files in lib?
 [ ] check_attributes_for_nil method - how to make that cleaner?
 -----------
 [ ] Get permission from BFAS to scrape their site -pending-

@@ -1,5 +1,3 @@
-require_relative '../../../config/environment'
-
 class Pigs < Animals
   @@all = []
 
