@@ -34,7 +34,8 @@ gem 'bestfriendfinder'
 
 ## Usage
 
-Type `bestfriendfinder` in the command line
+In the command line, type `rake install`.
+Then type `bestfriendfinder` in the command line.
 
 ## Development
 
