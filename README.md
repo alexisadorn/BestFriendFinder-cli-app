@@ -28,7 +28,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Type `bestfriendfinder` in the command line
 
 ## Development
 
