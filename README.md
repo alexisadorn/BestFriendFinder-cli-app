@@ -26,11 +26,11 @@ gem 'bestfriendfinder'
 
 ~~And then execute:~~
 
-  $ bundle
+    $ bundle
 
 ~~Or install it yourself as:~~
 
-  $ gem install bestfriendfinder
+    $ gem install bestfriendfinder
 
 ## Usage
 
