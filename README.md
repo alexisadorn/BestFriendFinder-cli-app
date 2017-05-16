@@ -19,17 +19,15 @@ please visit the GitHub repository at https://github.com/alexisadorn/BestFriendF
 
 ~~Add this line to your application's Gemfile:~~
 
-~~```ruby
-gem 'bestfriendfinder'
-```~~
+~~ruby gem 'bestfriendfinder'~~
 
-And then execute:
+~~And then execute:~~
 
-    $ bundle
+    ~~$ bundle~~
 
-Or install it yourself as:
+~~Or install it yourself as:~~
 
-    $ gem install bestfriendfinder
+    ~~$ gem install bestfriendfinder~~
 
 ## Usage
 
