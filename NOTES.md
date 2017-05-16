@@ -26,8 +26,8 @@
 [X] Update the specifications of the .gemspec file
 [X] Update the spec.md file
 [X] Write a blog
-[ ] Publish blog
-[ ] Prepare a video demo on how to use the gem
+[X] Publish blog
+[X] Prepare a video demo on how to use the gem
 [ ] Get permission from BFAS to scrape their site -pending-
 [ ] Publish gem to RubyGems.org
 
