@@ -4,7 +4,7 @@ BestFriendFinder helps you find your new best friend by displaying animals that 
 at the Best Friend Animals Society's sanctuary in Kanab, UT. Help millions of homeless animals by choosing to
 '#AdoptDontShop'.
 
-BestFriendFinder will list available dogs, cats, rabbits, birds, horses, pigs, barnyard and small & furry animals.
+BestFriendFinder lists available dogs, cats, rabbits, birds, horses, pigs, barnyard and small & furry animals.
 You can learn more about the animal right here in the BestFriendFinder app, or copy/paste the link in your browser
 to find out how to adopt!
 
@@ -17,7 +17,7 @@ All content published by Best Friends is the property of Best Friends and is pro
 permission to be published to RubyGems.org and therefore cannot be installed to a Gemfile. To test out this gem,
 please visit the GitHub repository at https://github.com/alexisadorn/BestFriendFinder-cli-app and download the repo directly.*
 
-Add this line to your application's Gemfile:
+~~Add this line to your application's Gemfile:
 
 ```ruby
 gem 'bestfriendfinder'
@@ -29,7 +29,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install bestfriendfinder
+    $ gem install bestfriendfinder~~
 
 ## Usage
 
