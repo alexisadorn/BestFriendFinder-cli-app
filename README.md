@@ -17,11 +17,11 @@ All content published by Best Friends is the property of Best Friends and is pro
 permission to be published to RubyGems.org and therefore cannot be installed to a Gemfile. To test out this gem,
 please visit the GitHub repository at https://github.com/alexisadorn/BestFriendFinder-cli-app and download the repo directly.*
 
-~~Add this line to your application's Gemfile:
+~~Add this line to your application's Gemfile:~~
 
-```ruby
+~~```ruby
 gem 'bestfriendfinder'
-```
+```~~
 
 And then execute:
 
@@ -29,7 +29,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install bestfriendfinder~~
+    $ gem install bestfriendfinder
 
 ## Usage
 
