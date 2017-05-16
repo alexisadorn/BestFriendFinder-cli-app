@@ -22,12 +22,13 @@
 [X] Environment file - requiring all files in lib?
 [X] check_attributes_for_nil method - how to make that cleaner?
 -----------
-[ ] Get permission from BFAS to scrape their site -pending-
-[ ] Update the README file
-[ ] Update the specifications of the .gemspec file
-[ ] Update the spec.md file
+[X] Update the README file
+[X] Update the specifications of the .gemspec file
+[X] Update the spec.md file
+[X] Write a blog
+[ ] Publish blog
 [ ] Prepare a video demo on how to use the gem
-[ ] Write a blog
+[ ] Get permission from BFAS to scrape their site -pending-
 [ ] Publish gem to RubyGems.org
 
 ------ Notes -------

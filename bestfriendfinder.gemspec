@@ -13,6 +13,7 @@ Gem::Specification.new do |spec|
   spec.description   = %q{CLI app that scrapes information and returns a list of animals available for adoption
                           and their details from the Best Friends Animal Society sanctuary in Utah. http://bestfriends.org/}
   spec.homepage      = "https://github.com/alexisadorn/BestFriendFinder-cli-app"
+  spec.licenses      = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
