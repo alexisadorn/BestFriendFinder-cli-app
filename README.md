@@ -20,7 +20,7 @@ Add this line to your application's Gemfile:
 
 ```
 ruby
-gem 'bestfriendfinder'
+gem 'BestFriendFinder'
 ```
 
 And then execute:
@@ -29,7 +29,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install bestfriendfinder
+    $ gem install BestFriendFinder
 
 ## Usage
 
