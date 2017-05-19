@@ -10,32 +10,28 @@ to find out how to adopt!
 
 All content published by Best Friends is the property of Best Friends and is protected by copyright, trademark, and other intellectual property laws.
 
+For more information on how to use the app, see my [video walkthrough](https://www.youtube.com/watch?v=nJbM3NQelmk&feature=youtu.be)!
+
 ## Installation
 
-
-*Due to Intellectual Property terms & conditions with the Best Friends Animal Society, this gem has not yet received
-permission to be published to RubyGems.org and therefore cannot be installed to a Gemfile. To test out this gem,
-please visit the GitHub repository at https://github.com/alexisadorn/BestFriendFinder-cli-app and download the repo directly.*
-
-~~Add this line to your application's Gemfile:~~
+Add this line to your application's Gemfile:
 
 ```
 ruby
 gem 'bestfriendfinder'
 ```
 
-~~And then execute:~~
+And then execute:
 
     $ bundle
 
-~~Or install it yourself as:~~
+Or install it yourself as:
 
     $ gem install bestfriendfinder
 
 ## Usage
 
-In the command line, type `rake install`.
-Then type `bestfriendfinder` in the command line.
+Type `bestfriendfinder` in the command line.
 
 ## Development
 
