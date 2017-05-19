@@ -1,8 +1,10 @@
 # BestFriendFinder
 
 BestFriendFinder helps you find your new best friend by displaying animals that are available for adoption
-at the Best Friend Animals Society's sanctuary in Kanab, UT. Help millions of homeless animals by choosing to
+at the [Best Friend Animals Society](http://bestfriends.org/adopt/adopt-our-sanctuary)'s sanctuary in Kanab, UT. Help millions of homeless animals by choosing to
 '#AdoptDontShop'.
+
+![](http://dingo.care2.com/pictures/greenliving/1012/1011871.large.jpg)
 
 BestFriendFinder lists available dogs, cats, rabbits, birds, horses, pigs, barnyard and small & furry animals.
 You can learn more about the animal right here in the BestFriendFinder app, or copy/paste the link in your browser
