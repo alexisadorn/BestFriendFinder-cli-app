@@ -16,12 +16,10 @@ class CLI
 
     user_input = number_to_index(gets.chomp)
 
-    if user_input < 0 || user_input >= PETS.size
+    if !user_input.between?(0, PETS.size-1)
       puts "\nI'm sorry, that was an incorrect entry. Please try again.\n".red
       start
     end
-
-    puts "\nThank you. One moment as we pull up a list of available #{PETS[user_input].downcase}...".cyan
 
     @animal_object = define_animal_object(user_input)
     AnimalFactory.new(PETS[user_input], @animal_object)
@@ -50,6 +48,7 @@ class CLI
       display_all_animals
     end
 
+    AnimalFactory.add_attributes_to_animals(animal_number, @animal_object)
     display_details(animal_number)
   end
 
@@ -65,7 +64,7 @@ class CLI
       puts "Age:".green + " #{pet.age}"
       puts "Size:".green + " #{pet.size}"
       puts "Color:".green + " #{pet.color}"
-      puts "Sex:".green  + "#{pet.sex}\n\n"
+      puts "Sex:".green  + " #{pet.sex}\n\n"
       puts "#{pet.description}\n\n"
       puts "For more info on how to adopt #{pet.name}, visit www.bestfriends.org#{pet.url}"
 

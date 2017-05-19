@@ -18,8 +18,8 @@ class Scraper
   def self.scrape_pet_profile(url)
     pet_profile_details = {}
 
-    dog_profile = "http://bestfriends.org" + url
-    doc = Nokogiri::HTML(open(dog_profile))
+    pet_profile = "http://bestfriends.org" + url
+    doc = Nokogiri::HTML(open(pet_profile))
 
     pet_items = doc.css("div.rescue-groups-pet-info-item")
 
